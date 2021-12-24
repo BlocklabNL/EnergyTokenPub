@@ -8,6 +8,11 @@ node-fetch
 pg
 web3
 
+# Installed Tools
+psql (postgres)
+docker
+node
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -44,6 +49,12 @@ Inserting a value for solarPanel
 ```
 INSERT INTO solarPanel VALUES (1, 'SolarPanel1', '0x2a60706f3Ed605039ba4B13128440554F2756AC2', '2016-04-19', (SELECT assetName FROM site WHERE id=1), 'Delftsestraat, Gouda, Netherlands', '2021-10-11', '1650x992x35', ((SELECT ratedCap FROM site WHERE id=1) / 9), 275.35, 38.54, 29.68);
 ```
+
+### Setting up the environment variables
+The following env variables (in `./energytoken-api/config/.env.dev`) are needed before you can actually run this project.
+- SITEID
+- APIKEY
+Both of these are required, to get access to these you need to own a site of either solarEdge or another provider that has an api to extract solar data from
 
 ### `yarn install` followed by `yarn start:dev`
 To run the actual backend-api install the required packages and start up the development.

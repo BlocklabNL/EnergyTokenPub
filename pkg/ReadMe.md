@@ -46,6 +46,15 @@ var EnergyToken = eth.contract(abi).at(<Contract_address>) // created from migra
 
 Now you can access all functionality through the variable `EnergyToken`
 
+### To interact with the smart contract with an application
+To use the smart contract in an existing application navigate to the folder `./pkg/EnergyToken/build/contracts/EnergyToken.json`.
+Copy the whole file and paste it into your desired application location. 
+In the case of a React app (energytoken-ui) navigate to where your contract will be stored (in this case `./energytoken-ui/src/contracts/EnergyToken.js`) and wrap it inside a exports.default: I.E. `exports.default = (address) => (<The smart contract that you copied>)`
+
+Now that you have all the smart contract logic you need to add the actual contract address and owner address to the env file inside `./energytoken-ui/config/.env.dev`.
+
+If you have an existing site of solarPanels then this project can be run.
+
 ### Example smart contract functionality
 
 #### Minting a token
