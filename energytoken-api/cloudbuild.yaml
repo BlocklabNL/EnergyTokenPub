@@ -1,0 +1,5 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', '<registry>/<pilot-name>/<project-name>/<image-name>', '.' ]
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', '<registry>/<pilot-name>/<project-name>/<image-name>']
