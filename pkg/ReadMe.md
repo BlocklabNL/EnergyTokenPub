@@ -1,11 +1,11 @@
 # EnergyToken Smart Contract, standard: ERC-721 
 
-## Instaled packages
+## Installed packages
 zeppelin-solidity for the ERC-721 standard
 
 ## Rinkeby Deployment with truffle
-For the truffle migrate to work you need to have a mnemonic for your account on MetaMask, put this in a .secret file
-To build this Smart contract, go to the base folder of the smart contract and run `truffle compile` followed by `truffle migrate --network rinkeby`, this will create the address for the smart contract (save this for later use). Be sure to edit the truffle-config for the needed configurations locally.
+For the truffle migrate to work you need to have a mnemonic for your account on MetaMask, put this in a .secret file.  
+To build this Smart contract, go to the base folder of the smart contract and run `truffle compile` followed by `truffle migrate --network rinkeby`, this will create the address for the smart contract (save this for later use). Be sure to edit the truffle-config for the needed configurations locally.  
 Example of config:
 ```
 rinkeby:{
@@ -15,7 +15,7 @@ rinkeby:{
 ```
 
 ## Local build using ganache and truffle
-To build this Smart contract, go to the base folder of the smart contract and run `truffle compile` followed by `truffle migrate`, this will create the address for the smart contract (save this for later use). Be sure to edit the truffle-config for the needed configurations locally.
+To build this Smart contract, go to the base folder of the smart contract and run `truffle compile` followed by `truffle migrate`, this will create the address for the smart contract (save this for later use). Be sure to edit the truffle-config for the needed configurations locally.  
 Example of config:
 ```
 development: {
@@ -59,7 +59,7 @@ If you have an existing site of solarPanels then this project can be run.
 
 #### Minting a token
 `EnergyToken.mint(<Address that receives the token>, <Identifier>, <"URI">, {from:<address>, gas: <value in WEI>})`
-The Token URI definition we use is to define the solar panel metadata (this is not best performance but it does what it needs to)
+The Token URI definition we use is to define the solar panel metadata (this is not best performance but it does what it needs to)  
 Example URI:
 ```
 "<Panel Serial No>;<Panel Size>;<Panel Capacity> <Wp>;<Panel Location>"
@@ -76,7 +76,7 @@ Simply call tokensOfContract I.E.
 EnergyToken.tokensOfContract()
 ```
 
-#### Getting all address of the owners per token
+#### Getting all addresses of the owners per token
 Simply call EnergyToken.getAllAddressesOfOwners I.E.
 ```
 EnergyToken.getAllAddressesOfOwners()

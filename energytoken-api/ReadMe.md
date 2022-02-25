@@ -71,5 +71,5 @@ This then gets updated in the database.
 
 
 ## Deployment to the cloud
-To build this to the cloud run the command gcloud builds submit; What this does is run the cloudbuild.yaml file.
+To build this to the cloud run the command `gcloud builds submit;` What this does is run the cloudbuild.yaml file.
 The cloudbuild.yaml file runs the docker commands of build and push to the cloud.
